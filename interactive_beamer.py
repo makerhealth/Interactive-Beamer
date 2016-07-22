@@ -105,12 +105,12 @@ def listen(cap):
                 pin_bit = 1 << pin
                 # First check if transitioned from not touched to touched.
                 if current_pin & pin_bit and not last_pin & pin_bit:
-                    log('{0} touched'.format(pin))
+                    log(str(pin) + " touched")
                     current = int(pin)
                     update_image()
                 # Next check if transitioned from touched to not touched.
                 if not current_pin & pin_bit and last_pin & pin_bit:
-                    log('{0} released'.format(pin))
+                    log(str(pin) + " released")
 
             # Update last state and wait a short period before repeating.
             last_pin = current_pin
