@@ -31,7 +31,8 @@ For this project the following materials are needed:
   9. Connect the ends of all the wires from the projector wall into the breadboard and connect them in that way to the MRP121 sensor
   10. Now clone this git repository to your RaspberryPi with the command 
       ``` git clone git@github.com:makerhealth/Interactive-Beamer.git ```
-  11. Run the script in the git repository by the command ```python interactive_beamer.py```
+  11. Place the 13 pictures you want to display in the folder Images, one Images should be named base_image.png the other Images should be named from 0.png to 11.png
+  12. Run the script in the git repository by the command ```python interactive_beamer.py```
   
 ### Licence
 This project is published under the MIT License.
