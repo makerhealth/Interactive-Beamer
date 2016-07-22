@@ -19,7 +19,7 @@ For this project the following materials are needed:
  - Duck Tape
 
 ### Setup
-  Follow the steps to create your own interactive projector wall. You can finde a more detailed description including images on our homepage http://www.makerhealth.co.
+  Follow the steps to create your own interactive projector wall. 
   1. Install Raspbian or Noobs on your RaspberryPi. See https://www.raspberrypi.org/downloads/
   2. Install the Python library for the Capacitative Touch Sensor as discribed by Adafruit: https://learn.adafruit.com/mpr121-capacitive-touch-sensor-on-raspberry-pi-and-beaglebone-black/software
   3. Connect the MPR121 sensor with the RaspberryPi as discribed by Adafruit: https://learn.adafruit.com/mpr121-capacitive-touch-sensor-on-raspberry-pi-and-beaglebone-black/hardware
