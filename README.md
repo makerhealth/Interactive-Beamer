@@ -35,4 +35,4 @@ For this project the following materials are needed:
   12. Run the script in the git repository by the command ```python interactive_beamer.py```
   
 ### Licence
-This project is published under the MIT License.
+This project is published under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
