@@ -25,6 +25,7 @@ import os
 import sys
 import time
 import threading
+import urllib
 try:
     import Adafruit_MPR121.MPR121 as MPR121
 except:
@@ -39,8 +40,33 @@ root.attributes("-fullscreen", True)
 stop = False
 logging = True
 log_path = "./log/touch.log"
+reset_time = 30
+download_source = "None"
 base_image
 panel
+
+# Reading configuration file
+config_path = "./config.txt"
+try:
+    config_file = open(config_path)
+except:
+    print "Could not read configuration file"
+
+for line in config_file.readlines():
+    # Remove leading and trailing whit space chars.
+    # This is necessary, because the user might add
+    # them without any reason.
+    line = line.strip()
+
+    if line.startswith("log_path="):
+        log_path = line.split("log_path=")[1]
+        logging = True
+    if line.startswith("logging=False"):
+        logging = False
+    if line.startswith("reset_time="):
+        reset_time = line.split("reset_time=")[1]
+    if line.startswith("download_source="):
+        download_source = line.split("download_source=")[1]
 
 
 def reset_image():
@@ -132,10 +158,10 @@ def update_image():
     Updates image depending on the pin that was touched
     :return:
     """
-    global root, panel, im, current, timer, images_sensors
+    global root, panel, im, current, timer, images_sensors, reset_time
     # Resetting timer, will be started after image has been updated
     timer.cancel()
-    timer = threading.Timer(30, reset_image)
+    timer = threading.Timer(reset_time, reset_image)
 
     position = int(current)
 
@@ -167,6 +193,17 @@ def log(message):
     except:
         print "Error during logging"
 
+# Downloading images, if source server is given
+if download_source != "None":
+
+    for i in range(0, 12):
+        name = os.path.join("Images", str(i) + ".png")
+        try:
+            urllib.urlretrieve(download_source+"/"+name, name)
+            log("Downloaded Image: " + str(i))
+        except:
+            log("Could not downloaded Image: " + str(i))
+
 # Loading images in advance to increase the performance
 name = os.path.join("Images", "base_image.png")
 base_image = ImageTk.PhotoImage(file=name)
@@ -188,7 +225,7 @@ reset_image()
 
 # Starting all threads
 # Resetting the image after given time
-timer = threading.Timer(30, reset_image)
+timer = threading.Timer(reset_time, reset_image)
 
 # Listening to sensor input
 sensorListener = threading.Thread(target=listen_to_sensors)
