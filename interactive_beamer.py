@@ -19,7 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import Tkinter as tk
+import Tkinter as Tk
 from PIL import ImageTk
 import os
 import sys
@@ -33,13 +33,13 @@ except:
     sys.exit(1)
 
 # Setting up UI
-root = tk.Tk()
+root = Tk.Tk()
 root.attributes("-fullscreen", True)
 
 # Initializing general variables
 stop = False
 logging = True
-log_path = "./log/touch.log"
+log_path = "./beamer.log"
 reset_time = 30
 download_source = "None"
 base_image
@@ -193,6 +193,7 @@ def log(message):
     except:
         print "Error during logging"
 
+
 # Downloading images, if source server is given
 if download_source != "None":
 
@@ -207,7 +208,7 @@ if download_source != "None":
 # Loading images in advance to increase the performance
 name = os.path.join("Images", "base_image.png")
 base_image = ImageTk.PhotoImage(file=name)
-panel = tk.Label(root, image=base_image)
+panel = Tk.Label(root, image=base_image)
 
 images_sensors = []
 for i in range(0, 12):

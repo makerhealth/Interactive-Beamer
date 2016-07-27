@@ -1,0 +1,16 @@
+# reset_time:
+#    This parameter defines the time after
+#    the program reset the displayed image
+#    to the base_image
+reset_time=30
+
+# Logging Settings
+#    If logging is set to False nothing will
+#    be logged, otherwise the
+logging=True
+log_path=./beamer.txt
+
+# download_path
+#     This defines a URL from which the images 0
+#     to 12 will be downloaded.
+download_source=None
