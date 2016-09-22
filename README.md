@@ -46,7 +46,7 @@ For this project the following materials are needed:
      <br>If you experience problems try another power supply.
   4. Open the terminal and type the following lines
     <br>
-    ```bash
+    ```shell
     cd ~/Desktop/Projector
     sudo python interactive_projector.py
     ```
