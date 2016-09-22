@@ -30,7 +30,7 @@ For this project the following materials are needed:
   8. Tape each one wire with the Duck Tape to one aluminum plate and pull the wire trough the hole to the back of the acrylic board.
   9. Connect the ends of all the wires from the projector wall into the breadboard and connect them in that way to the MRP121 sensor
   10. Now clone this git repository to your RaspberryPi with the command 
-      ``` git clone git@github.com:makerhealth/Interactive-Beamer.git ```
+      <br>``` git clone git@github.com:makerhealth/Interactive-Beamer.git ```
   11. Place the 13 pictures you want to display in the folder Images, one Images should be named base_image.png the other Images should be named from 0.png to 11.png
   12. Run the script in the git repository by the command ```python interactive_beamer.py```
 
@@ -42,9 +42,15 @@ For this project the following materials are needed:
      <br> GND -> GND
      <br> SDA -> SDA
      <br> SCL -> SCL
-  3. Power up the Raspberry Pi and the Projector
-     If you experience problems try another power supply.
+  3. Power up the Raspberry Pi and the Projector.
+     <br>If you experience problems try another power supply.
   4. Open the terminal and type the following lines
+    <br>```{r, engine='bash', count_lines}
+    cd ~/Desktop/Projector
+    sudo python interactive_projector.py
+    ```
+  5. Connect the pins of the touch sensor with touch pads on the wall. 
+     <br> As discribed above each pin each pin is associated with a specifc picture. So you need to connect each pad with the picture you want to display when the pad is touched. 
 
 
 ### Licence
