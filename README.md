@@ -45,7 +45,8 @@ For this project the following materials are needed:
   3. Power up the Raspberry Pi and the Projector.
      <br>If you experience problems try another power supply.
   4. Open the terminal and type the following lines
-    <br>```{r, engine='bash', count_lines}
+    <br>
+    ```bash
     cd ~/Desktop/Projector
     sudo python interactive_projector.py
     ```
