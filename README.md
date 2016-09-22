@@ -38,10 +38,10 @@ For this project the following materials are needed:
   To use the interactive wall follow the given steps:
   1. Plugin the keyboard, mouse, and the projector (via HDMI-cable) into the Raspberry Pi
   2. Make sure the touch sensor and cobbler are connected
-      3V3 -> VIN
-      GND -> GND
-      SDA -> SDA
-      SCL -> SCL
+     <br> 3V3 -> VIN
+     <br> GND -> GND
+     <br> SDA -> SDA
+     <br> SCL -> SCL
   3. Power up the Raspberry Pi and the Projector
      If you experience problems try another power supply.
   4. Open the terminal and type the following lines
