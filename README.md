@@ -44,7 +44,7 @@ For this project the following materials are needed:
      <br> SCL -> SCL
   3. Power up the Raspberry Pi and the Projector.
      <br>If you experience problems try another power supply.
-  4. Open the terminal and type the following lines
+  4. Open the terminal and type the following lines. (Press enter after each line!)
     <br>```cd ~/Desktop/Projector```
     <br>```sudo python interactive_projector.py```
   5. Connect the pins of the touch sensor with touch pads on the wall. 
