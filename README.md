@@ -18,7 +18,7 @@ For this project the following materials are needed:
  - Velcro Tape
  - Duck Tape
 
-### Setup
+### First Setup
   Follow the steps to create your own interactive projector wall. 
   1. Install Raspbian or Noobs on your RaspberryPi. See https://www.raspberrypi.org/downloads/
   2. Install the Python library for the Capacitative Touch Sensor as discribed by Adafruit: https://learn.adafruit.com/mpr121-capacitive-touch-sensor-on-raspberry-pi-and-beaglebone-black/software
@@ -33,6 +33,19 @@ For this project the following materials are needed:
       ``` git clone git@github.com:makerhealth/Interactive-Beamer.git ```
   11. Place the 13 pictures you want to display in the folder Images, one Images should be named base_image.png the other Images should be named from 0.png to 11.png
   12. Run the script in the git repository by the command ```python interactive_beamer.py```
-  
+
+### Setup
+  To use the interactive wall follow the given steps:
+  1. Plugin the keyboard, mouse, and the projector (via HDMI-cable) into the Raspberry Pi
+  2. Make sure the touch sensor and cobbler are connected
+      3V3 -> VIN
+      GND -> GND
+      SDA -> SDA
+      SCL -> SCL
+  3. Power up the Raspberry Pi and the Projector
+     If you experience problems try another power supply.
+  4. Open the terminal and type the following lines
+
+
 ### Licence
 This project is published under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0).
