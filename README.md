@@ -4,7 +4,7 @@
 The idea of the project is to combine a RaspberryPi, a capacitative touch sensor and a projector to create a smart projector wall. The repository contains the python code which runs on the RaspberryPi and also contains instructions for setting up the hardware.
 
 ### What is the meaning of the repositories name?
-In German a projector is also called beamer. This a typical anglicism the Germans love to use. If you are interested in more strange German, you can watch this video https://www.youtube.com/watch?v=DCYnK-mlK2A.
+In German a projector is also called beamer. This a typical anglicism the Germans love to use. If you are interested in more strange German words, you can watch this video https://www.youtube.com/watch?v=DCYnK-mlK2A.
 
 ### Materials
 For this project the following materials are needed:
