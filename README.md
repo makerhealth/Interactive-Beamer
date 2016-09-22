@@ -45,11 +45,10 @@ For this project the following materials are needed:
   3. Power up the Raspberry Pi and the Projector.
      <br>If you experience problems try another power supply.
   4. Open the terminal and type the following lines
-    <br>
-    ```shell
+```bash
     cd ~/Desktop/Projector
     sudo python interactive_projector.py
-    ```
+```
   5. Connect the pins of the touch sensor with touch pads on the wall. 
      <br> As discribed above each pin each pin is associated with a specifc picture. So you need to connect each pad with the picture you want to display when the pad is touched. 
 
